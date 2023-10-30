@@ -41,6 +41,7 @@ function App() {
       if (newForm.feedPerDay && newForm.count) {
         let count = parseFloat(newForm.count);
         newForm.feedPerPortion = newForm.feedPerDay / count;
+        newForm.feedPerPortion = Math.round(newForm.feedPerPortion * 100) / 100;
       }
   
       return newForm;
